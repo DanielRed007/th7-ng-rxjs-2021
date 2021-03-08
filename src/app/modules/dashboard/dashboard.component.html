@@ -13,7 +13,11 @@
       <ng-container>
         <div [ngSwitch]="currentRoute">
           <div *ngSwitchCase="'ops1'">
-            <rxjs-multi-step></rxjs-multi-step>
+            <rxjs-multi-step
+              class="multi-step-form"
+              [formContent]="multiStepConfig"
+              (formSubmit)="onFormSubmit($event)"
+            ></rxjs-multi-step>
           </div>
           <div *ngSwitchCase="'ops2'">2</div>
           <div *ngSwitchCase="'ops3'">3</div>
