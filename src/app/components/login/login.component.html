@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="row" style="height: 100vh">
+    <div
+      class="col d-flex justify-content-center align-items-center bg-primary"
+    >
+      <div class="m-5">
+        <h1 class="display-1 text-end text-light rxjs-header">RxJs</h1>
+        <h1 class="display-3 text-end text-light year-header">2021</h1>
+      </div>
+      <form [formGroup]="loginForm" class="m-5">
+        <input
+          formControlName="user"
+          class="form-control m-2"
+          type="text"
+          placeholder="User"
+        />
+        <input
+          class="btn btn-warning m-2"
+          (click)="goToDashboard()"
+          type="submit"
+          value="Get In"
+        />
+      </form>
+    </div>
+  </div>
+</div>

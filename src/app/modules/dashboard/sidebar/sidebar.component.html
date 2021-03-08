@@ -1,0 +1,10 @@
+<div class="m-3">
+  <div *ngFor="let link of routes">
+    <button
+      class="btn btn-sm btn-secondary mt-3 text-white"
+      (click)="goToRoute(link.toRoute)"
+    >
+      {{ link.route }}
+    </button>
+  </div>
+</div>

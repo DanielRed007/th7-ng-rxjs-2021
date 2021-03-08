@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="row">
+    <rxjs-header></rxjs-header>
+  </div>
+  <div class="row">
+    <div class="col-2 bg-primary sidebar">
+      <rxjs-sidebar
+        [routes]="routeConfig.routes"
+        (currentRoute)="goToRoute($event)"
+      ></rxjs-sidebar>
+    </div>
+    <div class="col-10">
+      <ng-container>
+        <div [ngSwitch]="currentRoute">
+          <div *ngSwitchCase="'ops1'">
+            <rxjs-multi-step></rxjs-multi-step>
+          </div>
+          <div *ngSwitchCase="'ops2'">2</div>
+          <div *ngSwitchCase="'ops3'">3</div>
+          <div *ngSwitchCase="'ops4'">4</div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
